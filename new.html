@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="1">
+            <!-- <h4 id="heading1">Automatin></h4> -->
+            <div class="overlay overlay1">
+                <p>Explore</p>
+                <p>Automatin ></p>
+            </div>
+        </div>
+        <div class="box" id="2">
+            <!--<h4 id="heading2">Construction ></h4>-->
+            <div class="overlay overlay2">
+                <p>Explore</p>
+                <p>Construction ></p>
+            </div>
+        </div>
+        <div class="box" id="3">
+            <div class="overlay overlay3">
+                <p>Explore</p>
+                <p>Finance ></p>
+            </div>
+        </div>
+        <div class="box" id="4">
+            <div class="overlay overlay4">
+                    <p>Explore</p>
+                    <p>Gaming & Entertainment ></p>
+            </div>
+        </div>
+        <div class="box" id="5">
+            <div class="overlay overlay5">
+                <p>Explore</p>
+                <p>Healthcare ></p>
+            </div>
+        </div>
+        <div class="box" id="6">
+            <div class="overlay overlay6">
+                <p>Explore</p>
+                <p>Insurance ></p> 
+            </div>
+        </div>
+        <div class="box" id="7">
+            <div class="overlay overlay7">
+                <p>Explore</p>
+                <p>Legal ></p> 
+            </div>
+            
+        </div>
+        <div class="box" id="8">
+            <div class="overlay overlay8">
+                <p>Explore</p>
+                <p>Manufacturing ></p> 
+            </div>
+            
+        </div>
+        <div class="box" id="9">
+            <div class="overlay overlay9">
+                <p>Explore</p>
+                <p>Professional Service ></p>  
+            </div>
+            
+        </div>
+        <div class="box" id="10">
+            <div class="overlay overlay10">
+                <p>Explore</p>
+                <p>Real Estate ></p>
+            </div>
+            
+        </div>
+        <div class="box" id="11">
+            <div class="overlay overlay11">
+                <p>Explore</p>
+                <p>Retail & Wholesale ></p>
+            </div> 
+        </div>
+        <div class="box" id="12">
+            <div class="overlay overlay12">
+                <p>Explore</p>
+                <p>Technology ></p>
+            </div>
+        </div>
+        <div class="box" id="13">
+            <div class="overlay overlay13">
+                <p>Explore</p>
+                <p>Transport & Logistic ></p>
+            </div>
+            
+        </div>
+        <div class="box" id="14">
+            <div class="overlay overlay14">
+                <p>Explore</p>
+                <p>Utilities Renewables ></p>
+            </div>     
+        </div>
+        <div class="box" id="15">
+            <div class="overlay overlay15">
+                <p>Explore</p>
+                <p>Can't find your sector ></p></div>  
+        </div>
+    </div>
+    <script>
+        let eles = document.getElementsByClassName("box");
+        let mainc = document.getElementsByClassName("container")[0];
+        for(let i=0;i<eles.length;i++){
+            
+            eles[i].addEventListener("mouseenter", function (event){
+                console.log(event.target);
+                mainc.style.backgroundImage = "url('img"+event.target.id+".jpg')";
+                // document.getElementById("heading"+event.target.id).style.display="none"
+                console.log(event)
+                window.event = event;
+                document.getElementsByClassName("overlay"+event.target.id)[0].style.height="100%";
+                document.getElementsByClassName("overlay"+event.target.id)[0].style.background="rgba(0,0,0,0.3)";
+            })
+            eles[i].addEventListener("mouseleave",function (event){
+                // document.getElementById("heading"+event.target.id).style.display="block"
+                document.getElementsByClassName("overlay"+event.target.id)[0].style.background="rgba(0,0,0,0)";
+
+                document.getElementsByClassName("overlay"+event.target.id)[0].style.height="20%";
+            })
+        }
+    </script>
+</body>
+</html>
